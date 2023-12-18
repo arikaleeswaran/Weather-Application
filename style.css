@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+h1{
+    padding: 15px 0;
+    text-align: center;
+    font-size: 4vmin;
+    color: white;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+}
+.container{
+    display: flex;
+    gap: 2em;
+    padding: 3em;
+}
+.weather-input{
+    width: 550px;
+}
+.weather-input input{
+    width: 100%;
+    height: 46px;
+    outline: none;
+    margin: 10px 0 15px 0;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.0rem;
+}
+.weather-input button{
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: rgb(238, 183, 31);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+ .weather-input .location-btn{
+    background: rgb(0, 187, 255);
+}
+.weather-input .separetor{
+    width: 100%;
+    margin: 25px 0;
+    background: #0a0a0a;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-input .separetor::before{
+    content: "Or";
+    color: rgb(0, 0, 0);
+    font-size: 1.18rem;
+    padding: 5px;
+    background: rgb(140,190,255);
+    border-radius: 50%;
+    margin: -4px;
+    border: none;
+    outline: none;
+}
+.weather-data{
+    width: 100%;
+}
+.current-weather{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+    padding: 20px 70px 20px 70px;
+    border-radius: 5px;
+}
+.current-weather h2{
+    font-size: 1.7rem;
+}
+.weather-data h4{
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.current-weather .icon{
+  text-align: center;
+}
+.current-weather .icon img{
+    max-width: 120px;
+    margin-top: -15px;
+}
+.current-weather .icon h4{
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+.day-forecast{
+    font-size: 1rem;
+    margin: 20px 0;
+}
+.weather-cards{
+    display: flex;
+    gap: 20px;
+}
+.weather-cards .cards{
+    background: linear-gradient(109.6deg, rgb(177, 173, 219) 11.2%, rgb(245, 226, 226) 91.1%);
+    list-style: none;
+    padding: 18px 16px;
+    border-radius: 5px;
+    width: calc(100% / 5);
+}
+.weather-cards .cards img{
+    max-width: 70px;
+    margin: 5px 0 -12px 0;
+}
+
+@media (max-width: 1400px) {
+    .weather-data .current-weather {
+      padding: 20px;
+    }
+    .weather-cards {
+      flex-wrap: wrap;
+    }
+    .weather-cards .cards {
+      width: calc(100% / 4 - 15px);
+    }
+  }
+  @media (max-width: 1200px) {
+    .weather-cards .cards {
+      width: calc(100% / 3 - 15px);
+    }
+  }
+  @media (max-width: 950px) {
+    .weather-input {
+      width: 450px;
+    }
+    .weather-cards .cards {
+      width: calc(100% / 2 - 10px);
+    }
+  }
+  @media (max-width: 750px) {
+    h1 {
+      font-size: 1.45rem;
+      padding: 16px 0;
+    }
+    .container {
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+    .weather-input {
+      width: 100%;
+    }
+    .weather-data h2 {
+      font-size: 1.35rem;
+    }
+  }
